@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Table with Icons</title>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #0f2027, #487c8e, #3fa8d4);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Section heading */
+.pricing-section {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.pricing-heading {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+/* Container */
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Plan cards */
+.plan {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 250px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Accent bar */
+.accent-bar {
+    width: 8px;
+    background: linear-gradient(to bottom, #ff416c, #ff4b2b);
+}
+
+/* Content */
+.plan-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Hover effect */
+.plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(255,255,255,0.15);
+}
+
+/* Price */
+.price {
+    font-size: 28px;
+    font-weight: 700;
+}
+.price span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ccc;
+}
+
+/* Feature list with icons */
+.plan-content ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+    font-size: 14px;
+}
+
+.plan-content ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.plan-content ul li i {
+    color: #ff416c;
+    font-size: 16px;
+}
+
+/* Button */
+.plan-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.plan-content button:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+}
+
+/* Emphasize Pro Plan */
+.pro {
+    flex-grow: 1.2;
+    box-shadow: 0 15px 50px rgba(255,75,43,0.3);
+    background: linear-gradient(to right, rgba(255,65,108,0.2), rgba(255,75,43,0.2));
+}
+
+/* Headings */
+.plan h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pro {
+        flex-grow: 1;
+    }
+}
+</style>
+</head>
+<body>
+
+<main>
+<section class="pricing-section">
+    <h1 class="pricing-heading">Choose Your Plan</h1>
+    
+    <div class="pricing-container">
+        <!-- Basic Plan -->
+        <article class="plan basic">
+            <div class="accent-bar"></div>
+            <div class="plan-content">
+                <header>
+                    <h2>Basic</h2>
+                    <p class="price">₹499<span>/mo</span></p>
+                </header>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> 5 Projects</li>
+                    <li><i class="fas fa-check-circle"></i> 10 GB Storage</li>
+                    <li><i class="fas fa-check-circle"></i> Email Support</li>
+                </ul>
+                <footer>
+                    <button>Select</button>
+                </footer>
+            </div>
+        </article>
+
+        <!-- Pro Plan -->
+        <article class="plan pro">
+            <div class="accent-bar"></div>
+            <div class="plan-content">
+                <header>
+                    <h2>Pro</h2>
+                    <p class="price">₹999<span>/mo</span></p>
+                </header>
+                <ul>
+                    <li><i class="fas fa-star"></i> Unlimited Projects</li>
+                    <li><i class="fas fa-star"></i> 100 GB Storage</li>
+                    <li><i class="fas fa-star"></i> Priority Support</li>
+                    <li><i class="fas fa-star"></i> Analytics</li>
+                </ul>
+                <footer>
+                    <button>Select</button>
+                </footer>
+            </div>
+        </article>
+
+        <!-- Premium Plan -->
+        <article class="plan premium">
+            <div class="accent-bar"></div>
+            <div class="plan-content">
+                <header>
+                    <h2>Premium</h2>
+                    <p class="price">₹1499<span>/mo</span></p>
+                </header>
+                <ul>
+                    <li><i class="fas fa-gem"></i> Unlimited Projects</li>
+                    <li><i class="fas fa-gem"></i> 1 TB Storage</li>
+                    <li><i class="fas fa-gem"></i> 24/7 Support</li>
+                    <li><i class="fas fa-gem"></i> Advanced Analytics</li>
+                    <li><i class="fas fa-gem"></i> Custom Domain</li>
+                </ul>
+                <footer>
+                    <button>Select</button>
+                </footer>
+            </div>
+        </article>
+    </div>
+</section>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Grid</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background: #f3f5f7;
+    padding: 40px;
+
+     background: repeating-conic-gradient(
+        from 0deg,
+        #ffd1dc 0deg 45deg,
+        #cce7ff 45deg 90deg,
+        #d4f1be 90deg 135deg,
+        #fff0b3 135deg 180deg,
+        #ffd1dc 180deg 225deg,
+        #cce7ff 225deg 270deg,
+        #d4f1be 270deg 315deg,
+        #fff0b3 315deg 360deg
+    );
+    min-height: 100vh;
+    padding: 40px;
+
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Product Grid Container */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Product Card */
+.product-card {
+    background: #ffffffcc;
+    backdrop-filter: blur(6px);
+    width: 300px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.06);
+    border: 1px solid #e7e7e7;
+}
+
+/* Featured grows more */
+.featured {
+    flex-grow: 1;
+}
+
+/* Card Hover Effect */
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.12);
+}
+
+/* Header Bar */
+.product-header {
+    background: linear-gradient(135deg, #e3e3e3, #f7f7f7);
+    padding: 12px 0;
+    text-align: center;
+}
+
+.product-header h4 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #444;
+    letter-spacing: 0.5px;
+}
+
+/* Product Inside Content */
+.product-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 20px 25px;
+}
+
+/* Product Image */
+.product-content img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Product Heading */
+.product-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    text-align: center;
+}
+
+/* Product Description */
+.product-content p {
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Price */
+.price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff5722;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<main>
+    <h2 class="heading">Our Products</h2>
+
+    <section class="product-container">
+
+        <!-- Featured Product -->
+        <article class="product-card featured">
+            
+            <header class="product-header">
+                <h4>Featured Product</h4>
+            </header>
+
+            <figure class="product-content">
+                <img src="https://images.pexels.com/photos/3394668/pexels-photo-3394668.jpeg?auto=compress&w=600" 
+                     alt="Featured Headphones">
+
+                <figcaption>
+                    <h3>Featured Headphones</h3>
+                    <p>High-quality sound with noise cancellation.</p>
+                    <span class="price">₹199</span>
+                </figcaption>
+            </figure>
+        </article>
+
+        <!-- Product 1 -->
+        <article class="product-card">
+            
+            <header class="product-header">
+                <h4>Product 1</h4>
+            </header>
+
+            <figure class="product-content">
+                <img src="https://images.pexels.com/photos/373945/pexels-photo-373945.jpeg?auto=compress&w=600" 
+                     alt="Wireless Earbuds">
+
+                <figcaption>
+                    <h3>Wireless Earbuds</h3>
+                    <p>Compact and powerful sound.</p>
+                    <span class="price">₹799</span>
+                </figcaption>
+            </figure>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card">
+            
+            <header class="product-header">
+                <h4>Product 2</h4>
+            </header>
+
+            <figure class="product-content">
+                <img src="https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg?auto=compress&w=600" 
+                     alt="Smart Watch">
+
+                <figcaption>
+                    <h3>Smart Watch</h3>
+                    <p>Track fitness and notifications.</p>
+                    <span class="price">₹1999</span>
+                </figcaption>
+            </figure>
+        </article>
+
+    </section>
+</main>
+
+</body>
+</html>
