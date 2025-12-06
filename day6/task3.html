@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog Layout</title>
+    <style>
+  /* General */
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+.header {
+  text-align: center;
+    padding: 60px 20px;
+    background: repeating-radial-gradient(
+        circle,
+        #ffe6f0 0px,
+        #ffe6f0 40px,
+        #d6eaff 40px,
+        #d6eaff 80px,
+        #e7ffd6 80px,
+        #e7ffd6 120px,
+        #fff9e6 120px,
+        #fff9e6 160px
+    );
+
+    background-size: 400% 400%; /* makes the pattern smaller and repeats more */
+    border-bottom: 1px solid #eee;
+}
+.header h1 {
+    font-size: 42px;
+    margin: 0;
+    color: #222;
+}
+
+.subtitle {
+    color: #666;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+/* Blog Container */
+.blog-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+/* Blog Post Style */
+.blog-post {
+    /* background:aliceblue; */
+     background: linear-gradient(
+        135deg, 
+        #f9f7ff,   /* very light lavender */
+        #e6f0ff,   /* soft pastel blue */
+        #e0ffe6,   /* pale pastel green */
+        #fff7e6    /* soft pastel peach */
+    );
+
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px dotted #0f0f0f;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.10);
+}
+
+.post-title {
+    margin-top: 0;
+    font-size: 26px;
+    color: #222;
+}
+
+/* Tags */
+.tags span {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    padding: 4px 10px;
+    background: #eef1ff;
+    color: #4a4aff;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+/* Content */
+.post-content {
+    line-height: 1.7;
+    margin: 15px 0;
+}
+
+/* Read More Button */
+.read-btn {
+    padding: 10px 18px;
+    background: #4a4aff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.read-btn:hover {
+    background: #2a2ad9;
+}
+
+/* Footer inside each post */
+.post-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Main Page Footer */
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+   border-top: 1px solid #eee;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .post-title {
+        font-size: 22px;
+    }
+    .header h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <h1>My Modern Blog</h1>
+        <p class="subtitle">Thoughts • Stories • Ideas</p>
+    </header>
+
+    <!-- Blog Container -->
+    <div class="blog-container">
+
+        <!-- Blog Post 1 -->
+        <div class="blog-post">
+            <h2 class="post-title">A Peaceful Morning Walk</h2>
+            <div class="tags">
+                <span>#lifestyle</span><span>#morning</span><span>#health</span>
+            </div>
+            <p class="post-content">
+                Starting your day with a peaceful walk can boost your mood, reduce stress, 
+                and bring clarity to your thoughts. Nature has a unique way of making you feel alive.
+            </p>
+            <button class="read-btn">Read More</button>
+            <footer class="post-footer">Posted on Jan 10, 2025 • by John Doe</footer>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-post">
+            <h2 class="post-title">How to Stay Productive</h2>
+            <div class="tags">
+                <span>#productivity</span><span>#focus</span>
+            </div>
+            <p class="post-content">
+                Productivity is not about doing more. It's about doing what matters most and 
+                eliminating unnecessary distractions from your life.
+            </p>
+            <button class="read-btn">Read More</button>
+            <footer class="post-footer">Posted on Feb 2, 2025 • by Jane Smith</footer>
+        </div>
+
+    </div>
+
+    <!-- Page Footer -->
+    <footer class="main-footer">
+        <p>© 2025 My Modern Blog • All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Comparison Table</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Wrapper */
+.table-wrapper {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Table */
+.feature-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.table-header {
+    background: linear-gradient(135deg, #6a85f1, #9a4ef5);
+    color: white;
+}
+
+.feature-table th {
+    padding: 18px;
+    font-size: 17px;
+    border: none;
+}
+
+/* Body cells */
+.feature-table td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+.feature-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Alternate row color */
+.feature-table tr:nth-child(even) {
+    background: #f9f9ff;
+}
+
+/* Highlight Badges */
+.badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+}
+
+/* Badge colors */
+.red { background: #ff5d5d; }
+.green { background: #34c759; }
+.blue { background: #4da3ff; }
+.purple { background: #a25fff; }
+
+    </style>
+</head>
+<body>
+
+    <h1 class="title">Product Comparison</h1>
+
+    <div class="table-wrapper">
+        <table class="feature-table">
+
+            <tr class="table-header">
+                <th>Features</th>
+                <th>Product A</th>
+                <th>Product B</th>
+            </tr>
+
+            <tr>
+                <td>Price</td>
+                <td><span class="badge red">₹10,000</span></td>
+                <td><span class="badge green">₹12,500</span></td>
+            </tr>
+
+            <tr>
+                <td>Battery Life</td>
+                <td>8 Hours</td>
+                <td><span class="badge green">12 Hours</span></td>
+            </tr>
+
+            <tr>
+                <td>Warranty</td>
+                <td>1 Year</td>
+                <td><span class="badge green">2 Years</span></td>
+            </tr>
+
+            <tr>
+                <td>Storage</td>
+                <td><span class="badge blue">64 GB</span></td>
+                <td>32 GB</td>
+            </tr>
+
+            <tr>
+                <td>Customer Support</td>
+                <td>Standard</td>
+                <td><span class="badge purple">Premium</span></td>
+            </tr>
+
+        </table>
+    </div>
+
+</body>
+</html>

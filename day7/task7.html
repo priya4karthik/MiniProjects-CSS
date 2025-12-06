@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Forms Premium</title>
+  
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background: linear-gradient(135deg, #7bd9ff, #e6f2ff); */
+  background-image: url("https://img.freepik.com/free-vector/gradient-glassmorphism-horizontal-banner_23-2149440108.jpg?semt=ais_se_enriched&w=740&q=80");
+  
+  overflow: hidden;
+}
+
+/* Background Glow Bubbles */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #ff33dd80, #0000);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 12s infinite linear;
+}
+
+body::after {
+  background: radial-gradient(circle, #00a2ff80, #0000);
+  left: 60%;
+  top: 55%;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-50px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Flex Container */
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.forms-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.form-box {
+  width: 350px;
+  padding: 30px;
+  border-radius: 25px;
+  /* background-color: rgb(49, 144, 212); */
+
+   background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  border: 2px solid rgba(255, 255, 255, 0.3); 
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+  animation: popup 0.8s ease;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* Input Group */
+.input-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  color: #444;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 12px 12px 38px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background: #ffffffaa;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #8b5cff;
+  box-shadow: 0 0 6px #9c63ffa3;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  margin-top: 10px;
+
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+
+  background: linear-gradient(90deg, #4a00e0, #ff0080);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #ff44c540;
+}
+
+/* Links */
+.links {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.links a {
+  color: #333;
+  margin: 0 8px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: #6a00ff;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .forms-container {
+    flex-direction: column;
+  }
+
+  .form-box {
+    width: 90%;
+  }
+}
+
+</style>
+    </head>
+<body>
+
+<div class="wrapper">
+
+  <div class="forms-container">
+
+    <!-- Login Form -->
+    <div class="form-box">
+      <h2>Login</h2>
+      <div class="input-group">
+        <i class="fa fa-user"></i>
+        <input type="text" placeholder="Username" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fa fa-lock"></i>
+        <input type="password" placeholder="Password" required>
+      </div>
+
+      <button class="btn">SUBMIT</button>
+
+      <div class="links">
+         <a href="#">Forgot Password?</a>
+         <a href="#">Sign Up</a>
+      </div>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="form-box">
+      <h2>Sign Up</h2>
+      <div class="input-group">
+        <i class="fa fa-user"></i>
+        <input type="text" placeholder="Full Name" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fa fa-envelope"></i>
+        <input type="email" placeholder="Email" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fa fa-lock"></i>
+        <input type="password" placeholder="Create Password" required>
+      </div>
+
+      <button class="btn">REGISTER</button>
+
+      <div class="links">
+         <a href="#">Already have an account?</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

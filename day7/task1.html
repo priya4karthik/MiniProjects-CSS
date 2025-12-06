@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Demo</title>
+    <style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 18px 40px;
+    background: #f8c8c8; /* soft pink */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LEFT SECTION */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.brand {
+    font-size: 28px;
+    color: #c22727;
+    font-weight: 700;
+}
+
+/* CENTER MENU */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #4e0c0c;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* RED UNDERLINE (active look) */
+.nav-menu li a:hover {
+    background-color: #fbd5d5fd;
+    border-bottom: 3px solid #b21c1c;
+}
+
+/* Dropdown arrow */
+.arrow {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* RIGHT ICONS */
+.nav-icons {
+    display: flex;
+    gap: 25px;
+}
+
+.icon {
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    color: #b21c1c;
+}
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.drop-btn {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 35px;
+    background: #f8c8c8; /* soft pink */
+    width: 150px;
+    border-radius: 6px;
+    padding: 10px 0;
+    display: none;
+    
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #4e0c0c;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 10px;
+    transition: 0.3s;gap:20px;
+}
+
+/* .dropdown-menu li a:hover {
+     background-color: #fbd5d5fd;
+    border-bottom: 3px solid #b21c1c;
+} */
+
+/* Show on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+</style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="image.png" class="logo" alt="Logo">
+            <h2 class="brand">Gazelle</h2>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="#">eBikes</a></li>
+
+            <li class="dropdown">
+                    <a href="#" class="drop-btn">Categories ▾</a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Open Mode</a></li>
+                        <li><a href="#">Open Replay</a></li>
+                        
+                    </ul>
+                </li>
+
+            <li><a href="#">Experience Center</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <i class="icon">🔍</i>
+            <i class="icon">🛒</i>
+            <i class="icon">👤</i>
+        </div>
+    </nav>
+
+</body>
+</html>

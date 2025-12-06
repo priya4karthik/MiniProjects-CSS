@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        /* Background */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, #43cea2, #185a9d);
+    font-family: Arial, sans-serif;
+}
+
+/* Center Box */
+.login-box {
+    width: 350px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-box {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #4d8fe8;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #3277d8;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+
+            <input type="text" placeholder="Username" class="input-box">
+            <input type="password" placeholder="Password" class="input-box">
+
+            <button class="login-btn">Login</button>
+        </div>
+    </div>
+
+</body>
+</html>
