@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #fff;
+    background-color: black;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+}
+
+.pricing-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Required */
+    gap: 20px; /* Required */
+    max-width: 1100px;
+    margin: auto;
+}
+
+.plan {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan:hover {
+    transform: translateY(-10px); /* Hover effect */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.plan h2 {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.price {
+    color: green;
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.price span {
+    font-size: 16px;
+    color: #333;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.plan ul li {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">Pricing Plans</h1>
+
+    <div class="pricing-table">
+
+        <!-- Basic Plan -->
+        <div class="plan">
+            <h2>Basic</h2>
+            <p class="price">₹999<span>/month</span></p>
+            <ul>
+                <li>✔ 10GB Storage</li>
+                <li>✔ Email Support</li>
+                <li>✘ Custom Domain</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+
+        <!-- Standard Plan -->
+        <div class="plan">
+            <h2>Standard</h2>
+            <p class="price">₹1999<span>/month</span></p>
+            <ul>
+                <li>✔ 50GB Storage</li>
+                <li>✔ Priority Support</li>
+                <li>✔ Custom Domain</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="plan">
+            <h2>Premium</h2>
+            <p class="price">₹2999<span>/month</span></p>
+            <ul>
+                <li>✔ Unlimited Storage</li>
+                <li>✔ 24/7 Support</li>
+                <li>✔ Custom Domain & Analytics</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+    </div>
+
+    <footer>© 2025 Pricing Table. All rights reserved.</footer>
+</div>
+
+</body>
+</html>

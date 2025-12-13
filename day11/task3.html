@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Project 3 - Sticky Navbar</title>
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #0d6efd;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  display: block;
+  padding: 15px 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffd966;
+}
+
+/* Sections */
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-family: Arial, sans-serif;
+}
+
+/* Section Colors */
+.home {
+  background: #f4f6f9;
+}
+
+.about {
+  background: #e2e6ea;
+}
+
+.services {
+  background: #d1ecf1;
+}
+
+.contact {
+  background: #fde2e4;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Sections -->
+  <section id="home" class="section home">
+    <h1>Home Section</h1>
+  </section>
+
+  <section id="about" class="section about">
+    <h1>About Section</h1>
+  </section>
+
+  <section id="services" class="section services">
+    <h1>Services Section</h1>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h1>Contact Section</h1>
+  </section>
+
+</body>
+</html>

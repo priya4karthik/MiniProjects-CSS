@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section with Overlay</title>
+    <style>
+        /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative; /* Required for overlay */
+    height: 80vh;
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=60');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute; /* Required to center inside parent */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4); /* optional semi-transparent overlay */
+    padding: 30px 50px;
+    border-radius: 10px;
+}
+
+/* TEXT STYLING */
+.overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.cta {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .overlay h1 {
+        font-size: 2rem;
+    }
+
+    .overlay p {
+        font-size: 1rem;
+    }
+
+    .overlay {
+        padding: 20px 30px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="overlay">
+            <h1>Welcome to Our Website</h1>
+            <p>Discover amazing content and features</p>
+            <button class="cta">Get Started</button>
+        </div>
+    </section>
+
+</body>
+</html>

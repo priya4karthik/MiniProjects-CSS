@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* spacing between items */
+    max-width: 1000px;
+    margin: auto;
+}
+
+.item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item p {
+    padding: 10px;
+    font-size: 16px;
+    background: #fff;
+}
+
+    </style>
+</head>
+<body>
+
+<h1 class="title">Photo Gallery</h1>
+
+<div class="gallery">
+
+    <div class="item">
+        <img src="https://img.freepik.com/premium-vector/vector-mountain-landscape-lake-highlands_981067-1238.jpg?semt=ais_hybrid&w=740&q=80" alt="Mountain">
+        <p>Mountain View</p>
+    </div>
+
+    <div class="item">
+        <img src="https://oyla.us/wp-content/uploads/2023/08/forest1.jpg" alt="Forest">
+        <p>Green Forest</p>
+    </div>
+
+    <div class="item">
+        <img src="https://img.freepik.com/free-photo/tropical-beach-paradise-with-palm-trees-turquoise-water_23-2151975534.jpg?semt=ais_hybrid&w=740&q=80" alt="Beach">
+        <p>Sunny Beach</p>
+    </div>
+
+    <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw2RWlJED6z0F0cn2bUbMJ1dx2RY-skTef4w&s" alt="City">
+        <p>City Skyline</p>
+    </div>
+
+    <div class="item">
+        <img src="https://img.freepik.com/free-photo/aerial-view-flowing-river-surrounded-by-pine-trees-park_181624-50125.jpg?semt=ais_hybrid&w=740&q=80" alt="River">
+        <p>Calm River</p>
+    </div>
+
+    <div class="item">
+        <img src="https://cdn.britannica.com/10/152310-050-5A09D74A/Sand-dunes-Sahara-Morocco-Merzouga.jpg" alt="Desert">
+        <p>Desert Dunes</p>
+    </div>
+
+</div>
+
+</body>
+</html>

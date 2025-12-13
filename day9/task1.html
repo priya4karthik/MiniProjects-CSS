@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Image Gallery with Lightbox Hover</title>
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  padding: 20px;
+}
+
+/* Gallery container */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* px spacing */
+  justify-content: center;
+}
+
+/* Image item container */
+.image-item {
+  width: 30%;     /* % width */
+  height: 30vh;   /* vh height */
+  background: #ddd;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Images */
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+/* Caption text */
+.image-item figcaption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 1.2rem; /* rem for caption */
+  font-weight: 600;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Hover effect: zoom + brightness overlay */
+.image-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.75);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .image-item {
+    width: 45%;
+    height: 25vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-item {
+    width: 90%;
+    height: 20vh;
+  }
+}
+
+  </style>
+</head>
+<body>
+<h1 style="text-align: center; margin-bottom: 20px; text-decoration: underline; color: crimson;">Photo Gallery</h1>
+  <section class="image-gallery">
+    <figure class="image-item">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Nature 1" />
+      <figcaption>Mountain View</figcaption>
+    </figure>
+
+    <figure class="image-item">
+      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80" alt="Nature 2" />
+      <figcaption>Forest Path</figcaption>
+    </figure>
+
+    <figure class="image-item">
+      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=600&q=80" alt="Nature 3" />
+      <figcaption>Desert Dunes</figcaption>
+    </figure>
+
+    <figure class="image-item">
+      <img src="https://images.unsplash.com/photo-1433878455169-4698e60005b1?auto=format&fit=crop&w=600&q=80" alt="Nature 4" />
+      <figcaption>Lake Reflection</figcaption>
+    </figure>
+
+    <figure class="image-item">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Nature 5" />
+      <figcaption>Sunset Beach</figcaption>
+    </figure>
+
+    
+    <figure class="image-item">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Nature 5" />
+      <figcaption>Sunset Beach</figcaption>
+    </figure>
+     <figure class="image-item">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Nature 1" />
+      <figcaption>Mountain View</figcaption>
+    </figure>
+  </section>
+
+</body>
+</html>

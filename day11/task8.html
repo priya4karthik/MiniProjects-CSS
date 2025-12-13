@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Project 8 - Image Caption Overlay</title>
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Center Page */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Image Wrapper */
+.image-card {
+  position: relative; /* positioning context */
+  width: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Image */
+.image-card img {
+  width: 100%;
+  display: block;
+}
+
+/* Caption Overlay */
+.caption {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Show Caption on Hover */
+.image-card:hover .caption {
+  opacity: 1;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="image-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9YYh5Fk1u9VsWWr1MhkyQeOzeNbtnnMO96g&s" alt="Sample Image">
+    <div class="caption">
+      <h3>Beautiful View</h3>
+      <p>Hover caption overlay</p>
+    </div>
+  </div>
+
+</body>
+</html>

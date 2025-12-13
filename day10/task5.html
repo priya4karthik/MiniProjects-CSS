@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel Grid</title>
+    <style>
+        /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ================================
+   GRID LAYOUT
+=================================== */
+.admin-grid {
+    display: grid;
+    grid-template-areas:
+        "nav nav"
+        "sidebar content"
+        "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 70px 1fr 60px;
+    height: 100vh;
+}
+
+/* NAVIGATION */
+.nav {
+    grid-area: nav;
+    background: #1e1e2f;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    grid-area: sidebar;
+    background: #2b2b40;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar li {
+    cursor: pointer;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+.sidebar li:hover {
+    background: #41415e;
+}
+
+/* CONTENT AREA */
+.content {
+    grid-area: content;
+    padding: 20px;
+    background: #f5f5f5;
+    overflow-y: auto;
+}
+
+/* WIDGET GRID (nested grid) */
+.widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.widget {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    font-weight: bold;
+    display: flex;                /* flexbox inside widgets */
+    justify-content: center;
+    align-items: center;
+}
+
+/* FOOTER */
+.footer {
+    grid-area: footer;
+    background: #1e1e2f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================================
+   RESPONSIVE SIDEBAR COLLAPSE
+=================================== */
+
+@media (max-width: 800px) {
+    .admin-grid {
+        grid-template-areas:
+            "nav nav"
+            "content content"
+            "footer footer";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sidebar {
+        display: none; /* hide sidebar */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="admin-grid">
+
+        <nav class="nav">
+            <h1>Admin Panel</h1>
+        </nav>
+
+        <aside class="sidebar">
+            <ul>
+                <li>Dashboard</li>
+                <li>Users</li>
+                <li>Reports</li>
+                <li>Settings</li>
+            </ul>
+        </aside>
+
+        <main class="content">
+
+            <div class="widgets">
+                <div class="widget">Widget 1</div>
+                <div class="widget">Widget 2</div>
+                <div class="widget">Widget 3</div>
+                <div class="widget">Widget 4</div>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            &copy; 2025 Admin Panel
+        </footer>
+
+    </div>
+
+</body>
+</html>

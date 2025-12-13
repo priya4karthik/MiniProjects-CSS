@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Project 5 - Tooltip</title>
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page Center */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+}
+
+/* Button */
+.tooltip-btn {
+  position: relative; /* positioning context */
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Tooltip Box */
+.tooltip-text {
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Tooltip Arrow */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+}
+
+/* Show Tooltip on Hover */
+.tooltip-btn:hover .tooltip-text {
+  opacity: 1;
+}
+
+  </style>
+</head>
+<body>
+
+  <button class="tooltip-btn">
+    Hover Me
+    <span class="tooltip-text">This is a tooltip</span>
+  </button>
+
+</body>
+</html>

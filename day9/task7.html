@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Grid</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3-column layout */
+    gap: 20px;
+}
+
+/* Project Card */
+.project {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Hover Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project:hover img {
+    transform: scale(1.1); /* zoom effect */
+}
+
+.project:hover .overlay {
+    opacity: 1; /* show title */
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<h1 class="title">My Portfolio</h1>
+
+<div class="portfolio-grid">
+
+    <div class="project">
+        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296
+" alt="">
+        <div class="overlay">Dashboard </div>
+    </div>
+
+    <div class="project">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4
+" alt="">
+        <div class="overlay">Web development</div>
+    </div>
+
+    <div class="project">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c
+" alt="">
+        <div class="overlay">Mobile App UI</div>
+    </div>
+
+    <div class="project">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c
+" alt="">
+        <div class="overlay">coding workspace</div>
+    </div>
+
+    <div class="project">
+        <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87
+" alt="">
+        <div class="overlay">UI / UX wireframe</div>
+    </div>
+
+    <div class="project">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c
+" alt="">
+        <div class="overlay">Architecture</div>
+    </div>
+
+</div>
+
+</body>
+</html>

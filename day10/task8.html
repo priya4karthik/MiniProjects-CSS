@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <style>
+        /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* FAQ GRID */
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two columns for desktop */
+    gap: 20px;
+}
+
+/* FAQ ITEM */
+.faq-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 10px 15px;
+}
+
+/* SUMMARY STYLING */
+.faq-item summary {
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px 0;
+    list-style: none; /* remove default triangle in some browsers */
+}
+
+/* Optional: add custom triangle */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::before {
+    content: "▶";
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::before {
+    transform: rotate(90deg); /* rotate triangle when open */
+}
+
+/* ANSWER STYLING */
+.faq-item p {
+    padding: 10px 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* RESPONSIVE: STACK ON MOBILE */
+@media (max-width: 700px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <h1 class="title">Frequently Asked Questions</h1>
+
+    <div class="faq-grid">
+
+        <details class="faq-item">
+            <summary>What is your return policy?</summary>
+            <p>We offer a 30-day money-back guarantee for all products. No questions asked.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>How do I track my order?</summary>
+            <p>You can track your order via the "My Orders" section after logging into your account.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Do you offer customer support?</summary>
+            <p>Yes! Our support team is available 24/7 via email and live chat.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Can I change my subscription plan?</summary>
+            <p>Absolutely. You can upgrade or downgrade your plan anytime from your account settings.</p>
+        </details>
+
+    </div>
+
+</body>
+</html>

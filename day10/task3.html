@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Photo Gallery</title>
+    <style>
+        /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* PHOTO GALLERY GRID */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+/* IMAGE WRAPPER */
+.item {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.item:hover img{
+    transform: scale(1.05);
+    transition: 0.4s ease;
+}
+/* SPECIAL SPANS */
+.tall {
+    grid-row: span 2;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+    .wide,
+    .big {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 500px) {
+    .tall,
+    .big {
+        grid-row: span 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+  <h1 class="title">Photo Gallery</h1>
+
+    <div class="gallery">
+
+        <div class="item tall">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=60" alt="Tall Image">
+        </div>
+
+        <div class="item wide">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=60" alt="Wide Image">
+        </div>
+
+        <div class="item">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=60" alt="Image 3">
+        </div>
+
+        <div class="item">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=60" alt="Image 4">
+        </div>
+
+        <div class="item big">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=60" alt="Big Image">
+        </div>
+
+        <div class="item">
+            <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=600&q=60" alt="Image 6">
+        </div>
+
+    </div>
+
+
+</body>
+</html>

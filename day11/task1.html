@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Action Button</title>
+    <style>
+        /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 200vh; /* for scrolling demo */
+    padding: 20px;
+}
+
+/* FAB BUTTON */
+.fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #4caf50;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Hover Effect */
+.fab:hover {
+    transform: scale(1.2);
+    background: #45a049;
+}
+
+/* TOOLTIP */
+.tooltip {
+    position: absolute;
+    bottom: 70px;
+    right: 50%;
+    transform: translateX(50%);
+    background: #333;
+    color: white;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Show tooltip on hover */
+.fab:hover .tooltip {
+    opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .fab {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .tooltip {
+        bottom: 60px;
+        font-size: 0.75rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <h1>Mini Project: Floating Action Button</h1>
+    <p>Scroll down to see the floating button.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll to test the FAB.</p>
+
+    <!-- Floating Action Button -->
+    <button class="fab" aria-label="Add">
+        +
+        <span class="tooltip">Add New Item</span>
+    </button>
+
+</body>
+</html>

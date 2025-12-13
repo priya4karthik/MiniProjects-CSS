@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Project 7 - Floating Help Widget</title>
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Floating Widget Container */
+.help-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Hide checkbox */
+#toggle {
+  display: none;
+}
+
+/* Help Button */
+.help-btn {
+  width: 60px;
+  height: 60px;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Help Box */
+.help-box {
+  position: absolute;
+  bottom: 75px;
+  right: 0;
+  width: 240px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(0);
+  transform-origin: bottom right;
+  transition: 0.3s ease;
+}
+
+/* Open Help Box on Click */
+#toggle:checked ~ .help-box {
+  transform: scale(1);
+}
+
+/* Help Box Content */
+.help-box h4 {
+  margin-bottom: 8px;
+}
+
+.help-box p {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.help-box button {
+  width: 100%;
+  padding: 8px;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Floating Help Widget -->
+  <div class="help-widget">
+
+    <!-- Hidden Checkbox -->
+    <input type="checkbox" id="toggle">
+
+    <!-- Help Icon -->
+    <label for="toggle" class="help-btn">?</label>
+
+    <!-- Help Box -->
+    <div class="help-box">
+      <h4>Need Help?</h4>
+      <p>Hi! How can we assist you?</p>
+      <button>Start Chat</button>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Courses</title>
+    <style>
+        /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* COURSE GRID */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* REQUIRED */
+    gap: 20px;
+}
+
+/* COURSE CARD */
+.course {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* smooth hover */
+    cursor: pointer;
+}
+
+.course:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);   /* required highlight */
+}
+
+/* IMAGE */
+.course img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* TITLE */
+.course h3 {
+    margin-bottom: 10px;
+}
+
+/* Progress bar container (nested Flexbox) */
+.progress-wrapper {
+    width: 100%;
+    background: #ddd;
+    height: 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+
+    display: flex;         /* REQUIRED: nested flexbox */
+    align-items: center;
+}
+
+/* Progress bar fill */
+.progress-bar {
+    height: 100%;
+    background: #4caf50;
+    border-radius: 10px;
+}
+
+/* Text below progress bar */
+.progress-text {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+    </style>
+</head>
+<body>
+
+    <h1 class="title">Available Courses</h1>
+
+    <div class="course-grid">
+
+        <div class="course">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=60" alt="Course Thumbnail">
+            <h3>Web Development</h3>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar" style="width: 70%;"></div>
+            </div>
+            <span class="progress-text">70% Completed</span>
+        </div>
+
+        <div class="course">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=60" alt="Course Thumbnail">
+            <h3>Cyber Security</h3>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar" style="width: 45%;"></div>
+            </div>
+            <span class="progress-text">45% Completed</span>
+        </div>
+
+        <div class="course">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=60" alt="Course Thumbnail">
+            <h3>Python Programming</h3>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+            <span class="progress-text">90% Completed</span>
+        </div>
+
+        <div class="course">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=60" alt="Course Thumbnail">
+            <h3>UI/UX Design</h3>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar" style="width: 25%;"></div>
+            </div>
+            <span class="progress-text">25% Completed</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
