@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button Hover Effects</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4facfe, #43e97b);
+}
+
+/* Container */
+.container {
+    display: flex;
+    gap: 15px;
+}
+
+/* Base Button */
+.btn {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* Button Colors */
+.primary {
+    background: #2196f3;
+}
+
+.primary:hover {
+    background: #1976d2;
+}
+
+.secondary {
+    background: #4caf50;
+}
+
+.secondary:hover {
+    background: #388e3c;
+}
+
+.danger {
+    background: #f44336;
+}
+
+.danger:hover {
+    background: #d32f2f;
+}
+
+.warning {
+    background: #ff9800;
+}
+
+.warning:hover {
+    background: #f57c00;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <button class="btn primary">Primary Button</button>
+    <button class="btn secondary">Secondary Button</button>
+    <button class="btn danger">Danger Button</button>
+    <button class="btn warning">Warning Button</button>
+</div>
+
+</body>
+</html>

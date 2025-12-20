@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shimmer Effect Cards</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f2f5;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card Placeholder */
+.card {
+    width: 200px;
+    height: 250px;
+    border-radius: 12px;
+    background: #e0e0e0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shimmer Effect */
+.shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+/* Keyframes */
+@keyframes shimmer {
+    0% {
+        transform: translateX(-150px);
+    }
+    100% {
+        transform: translateX(250px);
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <div class="card shimmer"></div>
+    <div class="card shimmer"></div>
+    <div class="card shimmer"></div>
+</div>
+
+</body>
+</html>

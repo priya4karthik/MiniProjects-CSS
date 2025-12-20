@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Animated Skill Bars on Scroll</title>
+  <style>
+    * {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+}
+
+/* Skills Section */
+.skills {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Skill Item */
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Progress Bar Container */
+.bar {
+  width: 100%;
+  height: 14px;
+  background: #ddd;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+/* Progress Fill */
+.progress {
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  transition: width 2s ease;
+}
+
+.progress.html {
+  background: #e44d26;
+}
+
+.progress.css {
+  background: #264de4;
+}
+
+.progress.js {
+  background: #f0db4f;
+}
+
+/* Animated Class - added by JS on scroll */
+.progress.animate-html {
+  width: 90%;
+}
+
+.progress.animate-css {
+  width: 80%;
+}
+
+.progress.animate-js {
+  width: 70%;
+}
+
+  </style>
+</head>
+<body>
+
+  <div style="height: 100vh; display:flex; justify-content:center; align-items:center; font-size: 24px;">
+    Scroll down to see skill bars animate ↓
+  </div>
+
+  <section class="skills" id="skills">
+    <h2>My Skills</h2>
+    <div class="skill">
+      <span>HTML</span>
+      <div class="bar">
+        <div class="progress html"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>CSS</span>
+      <div class="bar">
+        <div class="progress css"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>JavaScript</span>
+      <div class="bar">
+        <div class="progress js"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const skillsSection = document.querySelector('.skills');
+  const progressBars = document.querySelectorAll('.progress');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        progressBars.forEach(bar => {
+          if (bar.classList.contains('html')) bar.classList.add('animate-html');
+          if (bar.classList.contains('css')) bar.classList.add('animate-css');
+          if (bar.classList.contains('js')) bar.classList.add('animate-js');
+        });
+        observer.unobserve(skillsSection); // Animate only once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(skillsSection);
+});
+
+  </script>
+</body>
+</html>

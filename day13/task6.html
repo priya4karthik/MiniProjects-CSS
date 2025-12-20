@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Testimonial Slider</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Slider Container */
+.slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+}
+
+/* Hide scrollbar (optional) */
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Testimonial Card */
+.testimonial {
+    flex: 0 0 100%;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Tablet View - 2 at a time */
+@media (min-width: 600px) {
+    .testimonial {
+        flex: 0 0 48%;
+    }
+}
+
+/* Desktop View - 3 at a time */
+@media (min-width: 1024px) {
+    .testimonial {
+        flex: 0 0 32%;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <h1 class="title">What Our Customers Say</h1>
+
+    <section class="slider">
+        <div class="testimonial">
+            <p>"Amazing service and great support!"</p>
+            <h4>- John Doe</h4>
+        </div>
+
+        <div class="testimonial">
+            <p>"The product is easy to use and very efficient."</p>
+            <h4>- Sarah Smith</h4>
+        </div>
+
+        <div class="testimonial">
+            <p>"Highly recommended for modern web projects."</p>
+            <h4>- David Lee</h4>
+        </div>
+
+        <div class="testimonial">
+            <p>"Excellent design and smooth performance."</p>
+            <h4>- Emma Brown</h4>
+        </div>
+
+        <div class="testimonial">
+            <p>"Best experience I've had with any platform."</p>
+            <h4>- Michael Wilson</h4>
+        </div>
+    </section>
+
+</body>
+</html>

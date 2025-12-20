@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pricing Table</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Pricing Grid */
+.pricing {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Pricing Card */
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.card ul li {
+    margin: 8px 0;
+}
+
+/* Button */
+.card button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Highlight Popular Plan */
+.popular {
+    border: 2px solid #007bff;
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+}
+
+/* Tablet View (2 cards) */
+@media (min-width: 600px) {
+    .pricing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop View (3 cards) */
+@media (min-width: 1024px) {
+    .pricing {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+    </style>
+<body>
+
+    <h1 class="title">Our Pricing Plans</h1>
+
+    <section class="pricing">
+        <div class="card">
+            <h2>Basic</h2>
+            <p class="price">$9 / month</p>
+            <ul>
+                <li>10 Projects</li>
+                <li>Email Support</li>
+                <li>Basic Analytics</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+
+        <div class="card popular">
+            <span class="badge">Most Popular</span>
+            <h2>Standard</h2>
+            <p class="price">$19 / month</p>
+            <ul>
+                <li>50 Projects</li>
+                <li>Priority Support</li>
+                <li>Advanced Analytics</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+
+        <div class="card">
+            <h2>Premium</h2>
+            <p class="price">$29 / month</p>
+            <ul>
+                <li>Unlimited Projects</li>
+                <li>24/7 Support</li>
+                <li>Full Analytics</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+    </section>
+
+</body>
+</html>

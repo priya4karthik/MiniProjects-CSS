@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Team Grid</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Team Card */
+.team-card {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.team-card img {
+    width: 100%;
+    display: block;
+}
+
+/* Basic Info */
+.info {
+    padding: 15px;
+    text-align: center;
+}
+
+.info h3 {
+    margin-bottom: 5px;
+}
+
+/* Hover Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0.9);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.team-card:hover .overlay {
+    opacity: 1;
+}
+
+.social {
+    margin-top: 15px;
+}
+
+.social a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Tablet View - 2 per row */
+@media (min-width: 600px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop View - 4 per row */
+@media (min-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <h1 class="title">Meet Our Team</h1>
+
+    <section class="team-grid">
+        <div class="team-card">
+            <img src="https://picsum.photos/300?random=1" alt="Team Member">
+            <div class="info">
+                <h3>John Doe</h3>
+                <p>Frontend Developer</p>
+            </div>
+            <div class="overlay">
+                <p>Expert in modern UI and UX design.</p>
+                <div class="social">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-card">
+            <img src="https://picsum.photos/300?random=2" alt="Team Member">
+            <div class="info">
+                <h3>Sarah Smith</h3>
+                <p>UI/UX Designer</p>
+            </div>
+            <div class="overlay">
+                <p>Designs user-friendly interfaces.</p>
+                <div class="social">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Dribbble</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-card">
+            <img src="https://picsum.photos/300?random=3" alt="Team Member">
+            <div class="info">
+                <h3>Michael Lee</h3>
+                <p>Backend Developer</p>
+            </div>
+            <div class="overlay">
+                <p>Handles APIs and databases.</p>
+                <div class="social">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-card">
+            <img src="https://picsum.photos/300?random=4" alt="Team Member">
+            <div class="info">
+                <h3>Emma Brown</h3>
+                <p>Project Manager</p>
+            </div>
+            <div class="overlay">
+                <p>Ensures smooth project delivery.</p>
+                <div class="social">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

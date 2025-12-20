@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flip Card Animation</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f2f5;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Flip Card */
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 300px;
+    perspective: 1000px; /* 3D effect */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Hover effect */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Card sides */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Front */
+.flip-card-front {
+    background: #2196f3;
+}
+
+/* Back */
+.flip-card-back {
+    background: #ff4081;
+    transform: rotateY(180deg);
+}
+
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h2>HTML</h2>
+                <p>Frontend markup language</p>
+            </div>
+            <div class="flip-card-back">
+                <h2>HTML Info</h2>
+                <p>Used to structure web pages with elements and tags.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h2>CSS</h2>
+                <p>Styling and design</p>
+            </div>
+            <div class="flip-card-back">
+                <h2>CSS Info</h2>
+                <p>Used for layout, colors, animations, and responsive design.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h2>JavaScript</h2>
+                <p>Interactive functionality</p>
+            </div>
+            <div class="flip-card-back">
+                <h2>JS Info</h2>
+                <p>Used to create dynamic behavior on websites.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

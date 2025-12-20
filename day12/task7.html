@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Typing Animation</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hero h1 {
+    font-size: 2em;
+    color: #2196f3;
+    display: flex;
+    align-items: center;
+}
+
+/* Typing effect */
+.text-typing {
+    overflow: hidden;          /* Ensures text is hidden initially */
+    white-space: nowrap;       /* Keep text in single line */
+    border-right: 0.15em solid transparent;
+    animation: typing 4s steps(30, end) forwards;
+}
+
+/* Cursor blink */
+.cursor {
+    font-weight: bold;
+    color: #2196f3;
+    animation: blink 0.7s step-end infinite;
+}
+
+/* Keyframes for typing */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Keyframes for cursor blink */
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>
+        <span class="text-typing">Welcome to Vetri Technology Solutions</span>
+        <span class="cursor">|</span>
+    </h1>
+</section>
+
+</body>
+</html>
